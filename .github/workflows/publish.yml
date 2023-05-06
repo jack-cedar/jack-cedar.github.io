@@ -7,6 +7,10 @@ on:
 
 jobs:
   publish:
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # t
+    
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,6 +21,7 @@ jobs:
 
       - name: Build Site
         run: emacs -Q --script build-site.el
+        
 
       - name: Deploy to GitHub Pages
         id: deployment
