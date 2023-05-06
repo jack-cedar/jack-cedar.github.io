@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -22,10 +23,7 @@ jobs:
       - name: Build Site
         run: emacs -Q --script build-site.el
         
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
-        
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: avinal/github-pages-deploy-action@v0.9
