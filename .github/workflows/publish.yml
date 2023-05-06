@@ -27,7 +27,7 @@ jobs:
       - name: Install Emacs
         run: sudo apt install emacs-nox --yes
       - name: Build Site
-        run: emacs -Q --script build-site.el
+        run: emacs -Q --script publish-site.el
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
