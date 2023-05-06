@@ -24,8 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+        
       - name: Install Emacs
-        run: sudo apt install emacs-nox --yes
+        uses: purcell/setup-emacs@master
+        with:
+          version: 27.2
+      
       - name: Build Site
         run: emacs -Q --script publish-site.el
       - name: Setup Pages
