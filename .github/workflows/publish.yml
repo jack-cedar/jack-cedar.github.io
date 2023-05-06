@@ -18,8 +18,6 @@ jobs:
       - name: Build Site
         run: emacs -Q --script build-site.el
 
-      - name: Publish generated content to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4
-        with:
-          branch: gh-pages
-          folder: public
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
