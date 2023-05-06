@@ -1,6 +1,4 @@
-#+title: Home
-* Overview
-This is my Personal site
-
-
-* Links
+#+title: Jc/Wiki
+* Welcome To My Own Personal Site/Wiki
+This site is a place for me to document all sorts of things
+whether it be my programming projects or other random shenanigans i get up to
