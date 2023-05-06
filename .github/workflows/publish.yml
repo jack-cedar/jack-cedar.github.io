@@ -10,10 +10,6 @@ jobs:
     permissions:
       pages: write      
       id-token: write   
-      
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     runs-on: ubuntu-latest
     steps:
@@ -25,6 +21,9 @@ jobs:
 
       - name: Build Site
         run: emacs -Q --script build-site.el
+        
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v1
         
 
       - name: Deploy to GitHub Pages
