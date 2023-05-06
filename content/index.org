@@ -1,26 +1,6 @@
-#+title: Basic Org Website
+#+title: Home
 * Overview
-this is an *example* of a _website_ written in /org-mode/
+This is my Personal site
 
 
-* Testing
-This is a test of reloading
-
-
-#+begin_src emacs-lisp
-  (setq org-publish-project-alist
-      (list
-       (list "my-org-site"
-	     :recursive t
-	     :base-directory "./content"
-	     :publishing-directory "./public"
-	     :publishing-function 'org-html-publish-to-html
-	     :with-author nil
-	     :with-creator t
-	     :with-toc t
-	     :section-numbers nil
-	     :time-stamp-file nil
-
-	     )))
-
-#+end_src
+* Links
