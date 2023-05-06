@@ -27,11 +27,13 @@
 (setq org-html-head
       "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />
       <style>
-      body {color: #fafafa; background-color: #232830;}
-      .title {color: #f9f871}
-      h2 {color: #d085d2}
-      a {color: #31c8d5}
-      </style>")
+      body {color: #fafafa; background-color: #232840;}
+        .title {color: #f9f871}
+        h2 {color: #d085d2}
+        a {color: #31c8d5}
+      </style>"
+
+      )
 
 
 
