@@ -1,5 +1,4 @@
 name: Publish To Pages
-
 on:
   push:
     branches: ["master"]
