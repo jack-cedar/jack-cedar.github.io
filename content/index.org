@@ -3,3 +3,10 @@
 * Welcome To My Personal Site/Wiki
 This site is a place for me to document all sorts of things
 whether it be my programming projects or other random shenanigans i get up to
+
+
+* Testing Inline Latex
+
+\begin{equation}                        
+x=\sqrt{b}                             
+\end{equation} 
