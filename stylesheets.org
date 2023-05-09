@@ -1,6 +1,7 @@
 
 
-#+PROPERTY: header-args:css :mkdirp yes :tangle ./public/css/my-css.css
+
+#+PROPERTY: header-args:css :mkdirp yes :tangle ./public/css/basic.css
 * Colours
  * yellow #f9f871
  * Purple #d085d2

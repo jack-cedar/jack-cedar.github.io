@@ -21,9 +21,9 @@
 ;; Load Publishing Utilities
 (require 'ox-publish)
 
-(setq relative-css-location "./css/simple.css")
+(setq relative-css-location "./css/basic.css")
 
-(org-babel-tangle-file "./stylesheets.org" (concat "./public/" relative-css-location))
+(org-babel-tangle-file "./stylesheets.org")
 
 
 
