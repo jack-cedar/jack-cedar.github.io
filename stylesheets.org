@@ -1,6 +1,6 @@
 
 
-#+PROPERTY: header-args:css :mkdirp yes
+#+PROPERTY: header-args:css :mkdirp yes :tangle ./public/css/my-css.css
 * Colours
  * yellow #f9f871
  * Purple #d085d2
@@ -8,7 +8,7 @@
 
 * Stylesheets
 
-#+begin_src css :tangle ./public/css/basic.css
+#+begin_src css
   body {color: #fafafa; background-color: #232840;}
   .title {color: #f9f871}
   h2 {color: #d085d2}

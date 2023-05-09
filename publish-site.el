@@ -21,21 +21,20 @@
 ;; Load Publishing Utilities
 (require 'ox-publish)
 
-(org-babel-tangle-file "./stylesheets.org")
+(setq relative-css-location "./css/simple.css")
+
+(org-babel-tangle-file "./stylesheets.org" (concat "./public/" relative-css-location))
+
+
 
 
 (setq make-backup-files nil)
-
-(setq 
-      
-    )
-
 
 
 (setq org-html-validation-link nil
       org-html-head-include-scripts nil
       org-html-head-include-default-style nil
-      org-html-head "<link rel=\"stylesheet\" href=\"./css/basic.css\" />"
+      org-html-head (format "<link rel=\"stylesheet\" href=\"%s\" />" relative-css-location)
       )
 ;;      <link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />
 
