@@ -10,7 +10,11 @@
 * Stylesheets
 
 #+begin_src css
-  body {color: #fafafa; background-color: #232840;}
+  body {
+      color: #fafafa;
+      background-color: #232840;
+      display: grid;
+  }
   .title {color: #f9f871}
   h2 {color: #d085d2}
   a {color: #31c8d5}
