@@ -1,3 +1,4 @@
+
 (require 'package)
 
 (setq-default load-prefer-newer t)
@@ -17,7 +18,7 @@
 (set-face-attribute 'mode-line-active nil :inherit 'mode-line)
 (org-babel-tangle-file "./stylesheets.org")
 
-(setq org-html-htmlize-output-type 'css)
+;;(setq org-html-htmlize-output-type 'css)
 
 (setq make-backup-files nil)
 
@@ -27,7 +28,8 @@
       org-html-head-include-scripts nil
       org-html-head-include-default-style nil
       org-html-head (format "<link rel=\"stylesheet\" href=\"%s\" />" relative-css-location)
-      org-html-htmlize-output-type 'css)
+      ;;org-html-htmlize-output-type 'css
+      )
 
 ;; Define Publishing Project
 (setq org-publish-project-alist
