@@ -1,4 +1,4 @@
-()
+(require 'package)
 
 (setq-default load-prefer-newer t)
 (setq package-user-dir (expand-file-name "./.packages"))
@@ -17,7 +17,7 @@
 (set-face-attribute 'mode-line-active nil :inherit 'mode-line)
 (org-babel-tangle-file "./stylesheets.org")
 
-;;(setq org-html-htmlize-output-type 'css)
+(setq org-html-htmlize-output-type 'css)
 
 (setq make-backup-files nil)
 
