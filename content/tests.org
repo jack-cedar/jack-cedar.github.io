@@ -1,13 +1,15 @@
 #+TITLE: Tests
+
 * Code Blocks
 
-#+begin_src rust
+#+begin_SRC rust 
   fn main() {
       println!("Hello World");
   }
-#+end_src
+#+end_SRC
 
 * Inline Latex
+
 
 \begin{equation}                        
 x^n + y^n = z^n

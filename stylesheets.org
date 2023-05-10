@@ -34,21 +34,29 @@
 	color: #d085d2;
     }
     a,a:visited{
-	color: #31c8d5
+	color: #31c8d5;
+	background-color: inherit;
+	font: inherit;
+	text-decoration: inherit;
+    }
+    
+    a:hover {
+	text-decoration: underline;
     }
 #+end_src
 
 #+begin_src css
-  pre{
-    background-color:var(--accent-bg);
-    
-    padding:1rem 1.4rem;
-    max-width:100%;
-    overflow:auto;
-    border-style: solid;
-    border-color: #d085d2;
-    border-radius: .3rem;
-    
-}
-#+end_src
+    pre{
+      font-family: 'Monaco', monospace;
+      background-color:var(--accent-bg);
 
+      padding:1rem 1.4rem;
+      max-width:100%;
+      overflow:auto;
+      border-style: solid;
+      border-color: #d085d2;
+      border-width: 1px;
+      border-radius: .3rem;
+
+  }
+#+end_src

@@ -1,42 +1,33 @@
-(require 'package)
+()
+
+(setq-default load-prefer-newer t)
 (setq package-user-dir (expand-file-name "./.packages"))
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
-
-;; Initialize package system
 (package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
-
-;; Install use-package
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
-(require 'use-package)
-
-;; Install dependencies
-(use-package htmlize)
-(use-package esxml)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
+(package-refresh-contents)
+(package-install 'htmlize)
+(add-to-list 'load-path package-user-dir)
 
 
-;; Load Publishing Utilities
+(require 'org)
 (require 'ox-publish)
+(require 'htmlize)
 
 (setq relative-css-location "./css/basic.css")
-
+(set-face-attribute 'mode-line-active nil :inherit 'mode-line)
 (org-babel-tangle-file "./stylesheets.org")
 
-
-
+;;(setq org-html-htmlize-output-type 'css)
 
 (setq make-backup-files nil)
 
 
-(setq org-html-validation-link nil
+(setq 
+      org-html-validation-link nil
       org-html-head-include-scripts nil
       org-html-head-include-default-style nil
       org-html-head (format "<link rel=\"stylesheet\" href=\"%s\" />" relative-css-location)
-      )
-;;      <link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />
+      org-html-htmlize-output-type 'css)
 
 ;; Define Publishing Project
 (setq org-publish-project-alist
@@ -46,9 +37,14 @@
 	     :base-directory "./content"
 	     :publishing-directory "./public"
 	     :publishing-function 'org-html-publish-to-html
+	     :html-doctype "html5"
+	     :html-head-include-default-style nil
+	     :html-head-include-scripts nil
 	     :with-author nil
 	     :with-creator t
 	     :with-toc t
+	     :html-html5-fancy t
+	    
 	     :section-numbers nil
 	     :time-stamp-file nil
 
