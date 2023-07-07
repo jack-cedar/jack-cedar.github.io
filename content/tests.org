@@ -8,6 +8,12 @@
   }
 #+end_SRC
 
+* quotes
+#+begin_quote
+this is a test
+of a quote
+#+end_quote
+
 * Inline Latex
 
 
